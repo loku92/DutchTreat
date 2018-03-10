@@ -1,0 +1,15 @@
+{
+  "ConnectionStrings": {
+    "DutchConnectionString": "server=LOKU\\SQLEXPRESS2;Database=DutchTreatDb;Integrated Security=true;MultipleActiveResultSets=true;"
+  },
+  "Colors": {
+    "Favorite": "blue"
+  },
+  "Logging": {
+    "LogLevel": {
+      "DutchTreat" : "Information",
+      "Default": "Information",
+      "Microsoft": "Warning"
+    }
+  }
+}
