@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using DutchTreat.Data;
 using DutchTreat.Services;
 using Microsoft.AspNetCore.Builder;
@@ -28,6 +29,8 @@ namespace DutchTreat
             {
                 cfg.UseSqlServer(_config.GetConnectionString("DutchConnectionString"));
             });
+
+            services.AddAutoMapper();
 
             services.AddTransient<IMailService,NullMailService>();
             services.AddTransient<DutchSeeder>(); // Transient - created when needed, not cached

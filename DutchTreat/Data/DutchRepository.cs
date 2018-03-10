@@ -20,11 +20,20 @@ namespace DutchTreat.Data
             _logger = logger;
         }
 
-        public IEnumerable<Order> GetAllOrders()
+        public void AddEntity(object model)
         {
+            _ctx.Add(model);
+        }
+
+        public IEnumerable<Order> GetAllOrders(bool includeItems)
+        {
+            if (includeItems)
+                return _ctx.Orders
+                    .Include(o => o.Items)
+                    .ThenInclude(i => i.Product)
+                    .ToList();
+
             return _ctx.Orders
-                .Include(o => o.Items)
-                .ThenInclude(i => i.Product)
                 .ToList();
         }
 
