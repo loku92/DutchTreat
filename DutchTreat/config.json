@@ -7,9 +7,14 @@
   },
   "Logging": {
     "LogLevel": {
-      "DutchTreat" : "Information",
+      "DutchTreat": "Information",
       "Default": "Information",
       "Microsoft": "Warning"
     }
+  },
+  "Tokens": {
+    "Key": "asfaf;lksda;dvk;ajkew;wdg;sad;ga;sd;g",
+    "Issuer": "localhost",
+    "Audience":  "users"
   }
 }
