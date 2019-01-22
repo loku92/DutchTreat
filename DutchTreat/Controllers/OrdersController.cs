@@ -38,7 +38,7 @@ namespace DutchTreat.Controllers
         {
             try
             {
-                var username = User.Identity.Name;
+                var username = User.Identity.Name ?? "dp@xd.com";
 
                 var results = _repository.GetAllOrdersByUser(username, includeItems);
 
